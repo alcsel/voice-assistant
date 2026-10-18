@@ -29,8 +29,8 @@ dev = ["pytest>=8.0"]
 voice-assistant = "voice_assistant.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/alcsel/aisoundassistant"
-Issues = "https://github.com/alcsel/aisoundassistant/issues"
+Homepage = "https://github.com/alcsel/voice-assistant"
+Issues = "https://github.com/alcsel/voice-assistant/issues"
 
 [tool.setuptools]
 packages = ["voice_assistant"]
