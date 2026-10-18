@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-assistant"
+version = "1.0.0"
+description = "Record speech in the browser, transcribe it with Vosk and answer questions through Hugging Face"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Selim Calici", email = "69143252+alcsel@users.noreply.github.com" }]
+keywords = ["speech-to-text", "vosk", "text-to-speech", "flask", "huggingface"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = ["flask>=3.0", "requests>=2.31", "vosk>=0.3.45"]
+
+[project.optional-dependencies]
+speech = ["torch>=2.1", "transformers>=4.38", "datasets>=2.18", "soundfile>=0.12"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+voice-assistant = "voice_assistant.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/alcsel/aisoundassistant"
+Issues = "https://github.com/alcsel/aisoundassistant/issues"
+
+[tool.setuptools]
+packages = ["voice_assistant"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

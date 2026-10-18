@@ -1,0 +1,10 @@
+# Runtime dependencies of the voice assistant.
+flask>=3.0
+requests>=2.31
+vosk>=0.3.45
+
+# Speech synthesis (only needed for the "say" command).
+torch>=2.1
+transformers>=4.38
+datasets>=2.18
+soundfile>=0.12
